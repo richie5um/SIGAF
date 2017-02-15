@@ -25,17 +25,20 @@
     SKNode* text1 = (SKLabelNode *)[self childNodeWithName:@"//text1Label"];
     SKNode* text2 = (SKLabelNode *)[self childNodeWithName:@"//text2Label"];
     SKNode* text3 = (SKLabelNode *)[self childNodeWithName:@"//text3Label"];
-    SKNode* text4 = (SKLabelNode *)[self childNodeWithName:@"//shakeLabel"];
+    SKNode* text4 = (SKLabelNode *)[self childNodeWithName:@"//fuckLabel"];
+    SKNode* text5 = (SKLabelNode *)[self childNodeWithName:@"//shakeLabel"];
     
     text1.alpha = 0.0;
     text2.alpha = 0.0;
     text3.alpha = 0.0;
     text4.alpha = 0.0;
+    text5.alpha = 0.0;
     
-    [text1 runAction:[SKAction fadeAlphaTo:1.0 duration:0.3]];
-    [text2 runAction:[SKAction fadeAlphaTo:1.0 duration:0.6]];
-    [text3 runAction:[SKAction fadeAlphaTo:1.0 duration:0.9]];
-    [text4 runAction:[SKAction fadeAlphaTo:1.0 duration:1.2]];
+    [text1 runAction:[SKAction sequence:@[[SKAction waitForDuration:0.0], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
+    [text2 runAction:[SKAction sequence:@[[SKAction waitForDuration:0.4], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
+    [text3 runAction:[SKAction sequence:@[[SKAction waitForDuration:0.8], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
+    [text4 runAction:[SKAction sequence:@[[SKAction waitForDuration:1.2], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
+    [text5 runAction:[SKAction sequence:@[[SKAction waitForDuration:1.6], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
 }
 
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
