@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA11671F1E54F19400938DB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA11671E1E54F19400938DB5 /* main.m */; };
+		BA1167221E54F19400938DB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1167211E54F19400938DB5 /* AppDelegate.m */; };
+		BA1167241E54F19400938DB5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA1167231E54F19400938DB5 /* GameScene.sks */; };
+		BA1167261E54F19400938DB5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA1167251E54F19400938DB5 /* Actions.sks */; };
+		BA1167291E54F19400938DB5 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1167281E54F19400938DB5 /* GameScene.m */; };
+		BA11672C1E54F19400938DB5 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA11672B1E54F19400938DB5 /* GameViewController.m */; };
+		BA11672F1E54F19400938DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA11672D1E54F19400938DB5 /* Main.storyboard */; };
+		BA1167311E54F19400938DB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1167301E54F19400938DB5 /* Assets.xcassets */; };
+		BA1167341E54F19400938DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1167321E54F19400938DB5 /* LaunchScreen.storyboard */; };
+		BA11673F1E54F19400938DB5 /* SIGAFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA11673E1E54F19400938DB5 /* SIGAFTests.m */; };
+		BA11674A1E54F19400938DB5 /* SIGAFUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1167491E54F19400938DB5 /* SIGAFUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA11673B1E54F19400938DB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA1167121E54F19300938DB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA1167191E54F19300938DB5;
+			remoteInfo = SIGAF;
+		};
+		BA1167461E54F19400938DB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA1167121E54F19300938DB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA1167191E54F19300938DB5;
+			remoteInfo = SIGAF;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA11671A1E54F19400938DB5 /* SIGAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIGAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA11671E1E54F19400938DB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BA1167201E54F19400938DB5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BA1167211E54F19400938DB5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BA1167231E54F19400938DB5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		BA1167251E54F19400938DB5 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		BA1167271E54F19400938DB5 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		BA1167281E54F19400938DB5 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		BA11672A1E54F19400938DB5 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		BA11672B1E54F19400938DB5 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		BA11672E1E54F19400938DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA1167301E54F19400938DB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA1167331E54F19400938DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA1167351E54F19400938DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA11673A1E54F19400938DB5 /* SIGAFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIGAFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA11673E1E54F19400938DB5 /* SIGAFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SIGAFTests.m; sourceTree = "<group>"; };
+		BA1167401E54F19400938DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA1167451E54F19400938DB5 /* SIGAFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIGAFUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA1167491E54F19400938DB5 /* SIGAFUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SIGAFUITests.m; sourceTree = "<group>"; };
+		BA11674B1E54F19400938DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA1167171E54F19300938DB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA1167371E54F19400938DB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA1167421E54F19400938DB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA1167111E54F19300938DB5 = {
+			isa = PBXGroup;
+			children = (
+				BA11671C1E54F19400938DB5 /* SIGAF */,
+				BA11673D1E54F19400938DB5 /* SIGAFTests */,
+				BA1167481E54F19400938DB5 /* SIGAFUITests */,
+				BA11671B1E54F19400938DB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA11671B1E54F19400938DB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA11671A1E54F19400938DB5 /* SIGAF.app */,
+				BA11673A1E54F19400938DB5 /* SIGAFTests.xctest */,
+				BA1167451E54F19400938DB5 /* SIGAFUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA11671C1E54F19400938DB5 /* SIGAF */ = {
+			isa = PBXGroup;
+			children = (
+				BA1167201E54F19400938DB5 /* AppDelegate.h */,
+				BA1167211E54F19400938DB5 /* AppDelegate.m */,
+				BA1167231E54F19400938DB5 /* GameScene.sks */,
+				BA1167251E54F19400938DB5 /* Actions.sks */,
+				BA1167271E54F19400938DB5 /* GameScene.h */,
+				BA1167281E54F19400938DB5 /* GameScene.m */,
+				BA11672A1E54F19400938DB5 /* GameViewController.h */,
+				BA11672B1E54F19400938DB5 /* GameViewController.m */,
+				BA11672D1E54F19400938DB5 /* Main.storyboard */,
+				BA1167301E54F19400938DB5 /* Assets.xcassets */,
+				BA1167321E54F19400938DB5 /* LaunchScreen.storyboard */,
+				BA1167351E54F19400938DB5 /* Info.plist */,
+				BA11671D1E54F19400938DB5 /* Supporting Files */,
+			);
+			path = SIGAF;
+			sourceTree = "<group>";
+		};
+		BA11671D1E54F19400938DB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA11671E1E54F19400938DB5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA11673D1E54F19400938DB5 /* SIGAFTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA11673E1E54F19400938DB5 /* SIGAFTests.m */,
+				BA1167401E54F19400938DB5 /* Info.plist */,
+			);
+			path = SIGAFTests;
+			sourceTree = "<group>";
+		};
+		BA1167481E54F19400938DB5 /* SIGAFUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BA1167491E54F19400938DB5 /* SIGAFUITests.m */,
+				BA11674B1E54F19400938DB5 /* Info.plist */,
+			);
+			path = SIGAFUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA1167191E54F19300938DB5 /* SIGAF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA11674E1E54F19400938DB5 /* Build configuration list for PBXNativeTarget "SIGAF" */;
+			buildPhases = (
+				BA1167161E54F19300938DB5 /* Sources */,
+				BA1167171E54F19300938DB5 /* Frameworks */,
+				BA1167181E54F19300938DB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SIGAF;
+			productName = SIGAF;
+			productReference = BA11671A1E54F19400938DB5 /* SIGAF.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA1167391E54F19400938DB5 /* SIGAFTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA1167511E54F19400938DB5 /* Build configuration list for PBXNativeTarget "SIGAFTests" */;
+			buildPhases = (
+				BA1167361E54F19400938DB5 /* Sources */,
+				BA1167371E54F19400938DB5 /* Frameworks */,
+				BA1167381E54F19400938DB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA11673C1E54F19400938DB5 /* PBXTargetDependency */,
+			);
+			name = SIGAFTests;
+			productName = SIGAFTests;
+			productReference = BA11673A1E54F19400938DB5 /* SIGAFTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA1167441E54F19400938DB5 /* SIGAFUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA1167541E54F19400938DB5 /* Build configuration list for PBXNativeTarget "SIGAFUITests" */;
+			buildPhases = (
+				BA1167411E54F19400938DB5 /* Sources */,
+				BA1167421E54F19400938DB5 /* Frameworks */,
+				BA1167431E54F19400938DB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA1167471E54F19400938DB5 /* PBXTargetDependency */,
+			);
+			name = SIGAFUITests;
+			productName = SIGAFUITests;
+			productReference = BA1167451E54F19400938DB5 /* SIGAFUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA1167121E54F19300938DB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = RichS;
+				TargetAttributes = {
+					BA1167191E54F19300938DB5 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = D5C4Q69MRF;
+						ProvisioningStyle = Automatic;
+					};
+					BA1167391E54F19400938DB5 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = D5C4Q69MRF;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BA1167191E54F19300938DB5;
+					};
+					BA1167441E54F19400938DB5 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = D5C4Q69MRF;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BA1167191E54F19300938DB5;
+					};
+				};
+			};
+			buildConfigurationList = BA1167151E54F19300938DB5 /* Build configuration list for PBXProject "SIGAF" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA1167111E54F19300938DB5;
+			productRefGroup = BA11671B1E54F19400938DB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA1167191E54F19300938DB5 /* SIGAF */,
+				BA1167391E54F19400938DB5 /* SIGAFTests */,
+				BA1167441E54F19400938DB5 /* SIGAFUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA1167181E54F19300938DB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA11672F1E54F19400938DB5 /* Main.storyboard in Resources */,
+				BA1167241E54F19400938DB5 /* GameScene.sks in Resources */,
+				BA1167311E54F19400938DB5 /* Assets.xcassets in Resources */,
+				BA1167341E54F19400938DB5 /* LaunchScreen.storyboard in Resources */,
+				BA1167261E54F19400938DB5 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA1167381E54F19400938DB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA1167431E54F19400938DB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA1167161E54F19300938DB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA11672C1E54F19400938DB5 /* GameViewController.m in Sources */,
+				BA1167221E54F19400938DB5 /* AppDelegate.m in Sources */,
+				BA1167291E54F19400938DB5 /* GameScene.m in Sources */,
+				BA11671F1E54F19400938DB5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA1167361E54F19400938DB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA11673F1E54F19400938DB5 /* SIGAFTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA1167411E54F19400938DB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA11674A1E54F19400938DB5 /* SIGAFUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA11673C1E54F19400938DB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA1167191E54F19300938DB5 /* SIGAF */;
+			targetProxy = BA11673B1E54F19400938DB5 /* PBXContainerItemProxy */;
+		};
+		BA1167471E54F19400938DB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA1167191E54F19300938DB5 /* SIGAF */;
+			targetProxy = BA1167461E54F19400938DB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA11672D1E54F19400938DB5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA11672E1E54F19400938DB5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA1167321E54F19400938DB5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA1167331E54F19400938DB5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA11674C1E54F19400938DB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BA11674D1E54F19400938DB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA11674F1E54F19400938DB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D5C4Q69MRF;
+				INFOPLIST_FILE = SIGAF/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.richsomerfield.SIGAF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BA1167501E54F19400938DB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D5C4Q69MRF;
+				INFOPLIST_FILE = SIGAF/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.richsomerfield.SIGAF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BA1167521E54F19400938DB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = D5C4Q69MRF;
+				INFOPLIST_FILE = SIGAFTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.richsomerfield.SIGAFTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SIGAF.app/SIGAF";
+			};
+			name = Debug;
+		};
+		BA1167531E54F19400938DB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = D5C4Q69MRF;
+				INFOPLIST_FILE = SIGAFTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.richsomerfield.SIGAFTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SIGAF.app/SIGAF";
+			};
+			name = Release;
+		};
+		BA1167551E54F19400938DB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = D5C4Q69MRF;
+				INFOPLIST_FILE = SIGAFUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.richsomerfield.SIGAFUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SIGAF;
+			};
+			name = Debug;
+		};
+		BA1167561E54F19400938DB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = D5C4Q69MRF;
+				INFOPLIST_FILE = SIGAFUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.richsomerfield.SIGAFUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SIGAF;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA1167151E54F19300938DB5 /* Build configuration list for PBXProject "SIGAF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA11674C1E54F19400938DB5 /* Debug */,
+				BA11674D1E54F19400938DB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA11674E1E54F19400938DB5 /* Build configuration list for PBXNativeTarget "SIGAF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA11674F1E54F19400938DB5 /* Debug */,
+				BA1167501E54F19400938DB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BA1167511E54F19400938DB5 /* Build configuration list for PBXNativeTarget "SIGAFTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA1167521E54F19400938DB5 /* Debug */,
+				BA1167531E54F19400938DB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BA1167541E54F19400938DB5 /* Build configuration list for PBXNativeTarget "SIGAFUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA1167551E54F19400938DB5 /* Debug */,
+				BA1167561E54F19400938DB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA1167121E54F19300938DB5 /* Project object */;
+}
