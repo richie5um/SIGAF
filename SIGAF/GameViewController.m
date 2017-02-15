@@ -33,8 +33,8 @@
     // Present the scene
     [skView presentScene:sceneNode];
     
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+    //skView.showsFPS = YES;
+    //skView.showsNodeCount = YES;
 }
 
 - (BOOL)shouldAutorotate {
@@ -47,6 +47,24 @@
     } else {
         return UIInterfaceOrientationMaskAll;
     }
+}
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    SKView * skView = (SKView *)self.view;
+    [skView.scene motionBegan:motion withEvent:event];
+}
+
+- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    SKView * skView = (SKView *)self.view;
+    [skView.scene motionCancelled:motion withEvent:event];
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    SKView * skView = (SKView *)self.view;
+    [skView.scene motionEnded:motion withEvent:event];
 }
 
 - (void)didReceiveMemoryWarning {

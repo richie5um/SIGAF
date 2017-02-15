@@ -108,18 +108,18 @@
 		BA11671C1E54F19400938DB5 /* SIGAF */ = {
 			isa = PBXGroup;
 			children = (
+				BA1167251E54F19400938DB5 /* Actions.sks */,
 				BA1167201E54F19400938DB5 /* AppDelegate.h */,
 				BA1167211E54F19400938DB5 /* AppDelegate.m */,
-				BA1167231E54F19400938DB5 /* GameScene.sks */,
-				BA1167251E54F19400938DB5 /* Actions.sks */,
+				BA1167301E54F19400938DB5 /* Assets.xcassets */,
 				BA1167271E54F19400938DB5 /* GameScene.h */,
 				BA1167281E54F19400938DB5 /* GameScene.m */,
+				BA1167231E54F19400938DB5 /* GameScene.sks */,
 				BA11672A1E54F19400938DB5 /* GameViewController.h */,
 				BA11672B1E54F19400938DB5 /* GameViewController.m */,
-				BA11672D1E54F19400938DB5 /* Main.storyboard */,
-				BA1167301E54F19400938DB5 /* Assets.xcassets */,
-				BA1167321E54F19400938DB5 /* LaunchScreen.storyboard */,
 				BA1167351E54F19400938DB5 /* Info.plist */,
+				BA1167321E54F19400938DB5 /* LaunchScreen.storyboard */,
+				BA11672D1E54F19400938DB5 /* Main.storyboard */,
 				BA11671D1E54F19400938DB5 /* Supporting Files */,
 			);
 			path = SIGAF;

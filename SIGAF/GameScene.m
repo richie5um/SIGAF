@@ -9,93 +9,63 @@
 #import "GameScene.h"
 
 @implementation GameScene {
-    NSTimeInterval _lastUpdateTime;
-    SKShapeNode *_spinnyNode;
-    SKLabelNode *_label;
+    SKLabelNode *_noLabel;
+    SKLabelNode *_yesLabel;
 }
 
 - (void)sceneDidLoad {
     // Setup your scene here
     
-    // Initialize update time
-    _lastUpdateTime = 0;
+    _noLabel = (SKLabelNode *)[self childNodeWithName:@"//noLabel"];
+    _yesLabel = (SKLabelNode *)[self childNodeWithName:@"//yesLabel"];
     
-    // Get label node from scene and store it for use later
-    _label = (SKLabelNode *)[self childNodeWithName:@"//helloLabel"];
+    _noLabel.alpha = 0.0;
+    _yesLabel.alpha = 0.0;
     
-    _label.alpha = 0.0;
-    [_label runAction:[SKAction fadeInWithDuration:2.0]];
+    SKNode* text1 = (SKLabelNode *)[self childNodeWithName:@"//text1Label"];
+    SKNode* text2 = (SKLabelNode *)[self childNodeWithName:@"//text2Label"];
+    SKNode* text3 = (SKLabelNode *)[self childNodeWithName:@"//text3Label"];
+    SKNode* text4 = (SKLabelNode *)[self childNodeWithName:@"//shakeLabel"];
     
-    CGFloat w = (self.size.width + self.size.height) * 0.05;
+    text1.alpha = 0.0;
+    text2.alpha = 0.0;
+    text3.alpha = 0.0;
+    text4.alpha = 0.0;
     
-    // Create shape node to use during mouse interaction
-    _spinnyNode = [SKShapeNode shapeNodeWithRectOfSize:CGSizeMake(w, w) cornerRadius:w * 0.3];
-    _spinnyNode.lineWidth = 2.5;
-    
-    [_spinnyNode runAction:[SKAction repeatActionForever:[SKAction rotateByAngle:M_PI duration:1]]];
-    [_spinnyNode runAction:[SKAction sequence:@[
-                                                [SKAction waitForDuration:0.5],
-                                                [SKAction fadeOutWithDuration:0.5],
-                                                [SKAction removeFromParent],
-                                                ]]];
+    [text1 runAction:[SKAction fadeAlphaTo:1.0 duration:0.3]];
+    [text2 runAction:[SKAction fadeAlphaTo:1.0 duration:0.6]];
+    [text3 runAction:[SKAction fadeAlphaTo:1.0 duration:0.9]];
+    [text4 runAction:[SKAction fadeAlphaTo:1.0 duration:1.2]];
 }
 
-
-- (void)touchDownAtPoint:(CGPoint)pos {
-    SKShapeNode *n = [_spinnyNode copy];
-    n.position = pos;
-    n.strokeColor = [SKColor greenColor];
-    [self addChild:n];
-}
-
-- (void)touchMovedToPoint:(CGPoint)pos {
-    SKShapeNode *n = [_spinnyNode copy];
-    n.position = pos;
-    n.strokeColor = [SKColor blueColor];
-    [self addChild:n];
-}
-
-- (void)touchUpAtPoint:(CGPoint)pos {
-    SKShapeNode *n = [_spinnyNode copy];
-    n.position = pos;
-    n.strokeColor = [SKColor redColor];
-    [self addChild:n];
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    // Run 'Pulse' action from 'Actions.sks'
-    [_label runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
-    
-    for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
-}
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    for (UITouch *t in touches) {[self touchMovedToPoint:[t locationInNode:self]];}
-}
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *t in touches) {[self touchUpAtPoint:[t locationInNode:self]];}
-}
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *t in touches) {[self touchUpAtPoint:[t locationInNode:self]];}
-}
-
-
--(void)update:(CFTimeInterval)currentTime {
-    // Called before each frame is rendered
-    
-    // Initialize _lastUpdateTime if it has not already been
-    if (_lastUpdateTime == 0) {
-        _lastUpdateTime = currentTime;
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (event.subtype == UIEventSubtypeMotionShake ) {
+        [self shaken];
     }
+}
+
+-(void)showLabel:(SKLabelNode*)label {
+    [label runAction:[SKAction sequence:@[
+                                         [SKAction fadeAlphaTo:1.0 duration:0.2],
+                                         [SKAction waitForDuration:3.0],
+                                         [SKAction fadeAlphaTo:0.0 duration:1.0]
+                                         ]]];
+}
+
+-(void)shaken {
+    [_noLabel removeAllActions];
+    [_yesLabel removeAllActions];
     
-    // Calculate time since last update
-    CGFloat dt = currentTime - _lastUpdateTime;
+    [_noLabel runAction:[SKAction fadeAlphaTo:0.0 duration:0.2]];
+    [_yesLabel runAction:[SKAction fadeAlphaTo:0.0 duration:0.2]];
     
-    // Update entities
-    for (GKEntity *entity in self.entities) {
-        [entity updateWithDeltaTime:dt];
+    NSInteger randomValue = arc4random_uniform(2);
+    
+    if (0 == randomValue) {
+        [self showLabel:_noLabel];
+    } else if (1 == randomValue) {
+        [self showLabel:_yesLabel];
     }
-    
-    _lastUpdateTime = currentTime;
 }
 
 @end
