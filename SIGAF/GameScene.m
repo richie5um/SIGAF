@@ -7,10 +7,12 @@
 //
 
 #import "GameScene.h"
+#import "UIColor+Hex.h"
 
 @implementation GameScene {
     SKLabelNode *_noLabel;
     SKLabelNode *_yesLabel;
+    NSArray *_colors;
 }
 
 - (void)sceneDidLoad {
@@ -22,23 +24,44 @@
     _noLabel.alpha = 0.0;
     _yesLabel.alpha = 0.0;
     
-    SKNode* text1 = (SKLabelNode *)[self childNodeWithName:@"//text1Label"];
-    SKNode* text2 = (SKLabelNode *)[self childNodeWithName:@"//text2Label"];
-    SKNode* text3 = (SKLabelNode *)[self childNodeWithName:@"//text3Label"];
-    SKNode* text4 = (SKLabelNode *)[self childNodeWithName:@"//fuckLabel"];
-    SKNode* text5 = (SKLabelNode *)[self childNodeWithName:@"//shakeLabel"];
+    SKNode* node1 = (SKLabelNode *)[self childNodeWithName:@"//text1Label"];
+    SKNode* node2 = (SKLabelNode *)[self childNodeWithName:@"//text2Label"];
+    SKNode* node3 = (SKLabelNode *)[self childNodeWithName:@"//text3Label"];
+    SKNode* node4 = (SKLabelNode *)[self childNodeWithName:@"//blackOutLabel"];
+    SKNode* node5 = (SKLabelNode *)[self childNodeWithName:@"//fuckLabel"];
+    SKNode* node6 = (SKLabelNode *)[self childNodeWithName:@"//shakeLabel"];
     
-    text1.alpha = 0.0;
-    text2.alpha = 0.0;
-    text3.alpha = 0.0;
-    text4.alpha = 0.0;
-    text5.alpha = 0.0;
+    node1.alpha = 0.0;
+    node2.alpha = 0.0;
+    node3.alpha = 0.0;
+    node4.alpha = 0.0;
+    node5.alpha = 0.0;
+    node6.alpha = 0.0;
     
-    [text1 runAction:[SKAction sequence:@[[SKAction waitForDuration:0.0], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
-    [text2 runAction:[SKAction sequence:@[[SKAction waitForDuration:0.4], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
-    [text3 runAction:[SKAction sequence:@[[SKAction waitForDuration:0.8], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
-    [text4 runAction:[SKAction sequence:@[[SKAction waitForDuration:1.2], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
-    [text5 runAction:[SKAction sequence:@[[SKAction waitForDuration:1.6], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
+    [node1 runAction:[SKAction sequence:@[[SKAction waitForDuration:0.0], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
+    [node2 runAction:[SKAction sequence:@[[SKAction waitForDuration:0.4], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
+    [node3 runAction:[SKAction sequence:@[[SKAction waitForDuration:0.8], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
+    [node4 runAction:[SKAction sequence:@[[SKAction waitForDuration:1.2], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
+    [node5 runAction:[SKAction sequence:@[[SKAction waitForDuration:1.6], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
+    [node6 runAction:[SKAction sequence:@[[SKAction waitForDuration:1.9], [SKAction fadeAlphaTo:1.0 duration:0.3]]]];
+    
+    _colors = @[
+                [UIColor colorWithHex:0xE64E42], // Red
+                [UIColor colorWithHex:0xE64E42], // Red
+                [UIColor colorWithHex:0xE64E42], // Red
+                [UIColor colorWithHex:0xE64E42], // Red
+                [UIColor colorWithHex:0xE64E42], // Red
+                [UIColor colorWithHex:0xFEA829], // Orange
+                [UIColor colorWithHex:0x3B9AD9], // Blue
+                [UIColor colorWithHex:0x39CB75], // Green
+                [UIColor colorWithHex:0x7561C3], // Purple
+                [UIColor colorWithHex:0xFFCC2F]  // Yellow
+    ];
+
+}
+
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    [self hideAnswer];
 }
 
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
@@ -55,12 +78,36 @@
                                          ]]];
 }
 
--(void)shaken {
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    for(UITouch* touch in touches) {
+        NSArray* nodes = [self nodesAtPoint:[touch locationInNode:self]];
+        for(SKNode* node in nodes) {
+            if ([node.name hasPrefix:@"fuckLabel"]) {
+                [self updateFuckLabel];
+            } else if ([node.name hasPrefix:@"blackOutLabel"]) {
+                [node runAction:[SKAction sequence:@[[SKAction fadeAlphaTo:0.0 duration:0.5], [SKAction removeFromParent]]]];
+            }
+        }
+    }
+}
+
+-(void)updateFuckLabel {
+    NSInteger randomValue = arc4random_uniform(_colors.count);
+    
+    SKLabelNode* label = (SKLabelNode *)[self childNodeWithName:@"//fuckLabel"];
+    label.fontColor = [_colors objectAtIndex:randomValue];
+}
+
+-(void)hideAnswer {
     [_noLabel removeAllActions];
     [_yesLabel removeAllActions];
     
     [_noLabel runAction:[SKAction fadeAlphaTo:0.0 duration:0.2]];
     [_yesLabel runAction:[SKAction fadeAlphaTo:0.0 duration:0.2]];
+}
+
+-(void)shaken {
+    [self hideAnswer];
     
     NSInteger randomValue = arc4random_uniform(2);
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A64EF2241CF2861A450A6E7 /* libPods-SIGAF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC43E0E9985A71CD7F7FAAC /* libPods-SIGAF.a */; };
 		BA11671F1E54F19400938DB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA11671E1E54F19400938DB5 /* main.m */; };
 		BA1167221E54F19400938DB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1167211E54F19400938DB5 /* AppDelegate.m */; };
 		BA1167241E54F19400938DB5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA1167231E54F19400938DB5 /* GameScene.sks */; };
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		216EF16CD12E22555E6AA4A5 /* Pods-SIGAF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIGAF.release.xcconfig"; path = "Pods/Target Support Files/Pods-SIGAF/Pods-SIGAF.release.xcconfig"; sourceTree = "<group>"; };
+		A91A0E1969AF8772A6967BBF /* Pods-SIGAF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIGAF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SIGAF/Pods-SIGAF.debug.xcconfig"; sourceTree = "<group>"; };
+		ABC43E0E9985A71CD7F7FAAC /* libPods-SIGAF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SIGAF.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA11671A1E54F19400938DB5 /* SIGAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIGAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA11671E1E54F19400938DB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA1167201E54F19400938DB5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A64EF2241CF2861A450A6E7 /* libPods-SIGAF.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AB45C26F6423F0CC3EE2AA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABC43E0E9985A71CD7F7FAAC /* libPods-SIGAF.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BA1167111E54F19300938DB5 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +103,8 @@
 				BA11673D1E54F19400938DB5 /* SIGAFTests */,
 				BA1167481E54F19400938DB5 /* SIGAFUITests */,
 				BA11671B1E54F19400938DB5 /* Products */,
+				BBFC217A00D7243F442FE23E /* Pods */,
+				0AB45C26F6423F0CC3EE2AA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +163,15 @@
 			path = SIGAFUITests;
 			sourceTree = "<group>";
 		};
+		BBFC217A00D7243F442FE23E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A91A0E1969AF8772A6967BBF /* Pods-SIGAF.debug.xcconfig */,
+				216EF16CD12E22555E6AA4A5 /* Pods-SIGAF.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA11674E1E54F19400938DB5 /* Build configuration list for PBXNativeTarget "SIGAF" */;
 			buildPhases = (
+				52DC2B0616C744193DC05F33 /* [CP] Check Pods Manifest.lock */,
 				BA1167161E54F19300938DB5 /* Sources */,
 				BA1167171E54F19300938DB5 /* Frameworks */,
 				BA1167181E54F19300938DB5 /* Resources */,
+				D7255FA289935B15B9005E9C /* [CP] Embed Pods Frameworks */,
+				18E0BDB2375C5A4CF0B3B376 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,6 +306,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18E0BDB2375C5A4CF0B3B376 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SIGAF/Pods-SIGAF-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52DC2B0616C744193DC05F33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D7255FA289935B15B9005E9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SIGAF/Pods-SIGAF-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA1167161E54F19300938DB5 /* Sources */ = {
@@ -433,6 +508,7 @@
 		};
 		BA11674F1E54F19400938DB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A91A0E1969AF8772A6967BBF /* Pods-SIGAF.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D5C4Q69MRF;
@@ -446,6 +522,7 @@
 		};
 		BA1167501E54F19400938DB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 216EF16CD12E22555E6AA4A5 /* Pods-SIGAF.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D5C4Q69MRF;
