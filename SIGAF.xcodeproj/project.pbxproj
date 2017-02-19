@@ -603,6 +603,7 @@
 				BA1167501E54F19400938DB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA1167511E54F19400938DB5 /* Build configuration list for PBXNativeTarget "SIGAFTests" */ = {
 			isa = XCConfigurationList;
@@ -611,6 +612,7 @@
 				BA1167531E54F19400938DB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA1167541E54F19400938DB5 /* Build configuration list for PBXNativeTarget "SIGAFUITests" */ = {
 			isa = XCConfigurationList;
@@ -619,6 +621,7 @@
 				BA1167561E54F19400938DB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
